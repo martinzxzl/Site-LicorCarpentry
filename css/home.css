@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box; /* Faz com que o padding e a borda sejam incluídos na largura e altura do elemento. */
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --color-primary: #9E472A;
+    --color-secondary: #E6DFD3;
+    --color-hover: #7C3820;
+
+    --font-family: montserrat, sans-serif;
+
+    --color-white: #FFFFFF;
+    --color-tomato: #E8A33D;
+}
+
+body {
+    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela. */
+    display: flex;
+    flex-direction: column; /* Permite que o conteúdo do body seja empilhado verticalmente. */
+}
+
+main {
+    flex: 1; /* Faz com que o main ocupe todo o espaço disponível entre o header e o footer. */
+}
+
+/* TITLE */
+
+h1 {
+    font-family: var(--font-family);
+    font-size: 3rem;
+    color: var(--color-white);
+
+    padding: 50px;
+}
+
+
+/* NAVIGATION LIST */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-primary);
+    
+    padding: 0 5%;
+}
+
+header ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin-right: 250px;
+    font-size: 1.2rem;
+
+
+    font-family: var(--font-family);
+
+}
+
+
+/* NAV STYLE */
+
+header a {
+    position: relative;             /* CORRIGIDO: faz o link ser a referência do traço */
+    text-decoration: none;          /* tira o sublinhado padrão do link */
+    color: var(--color-secondary);  /* cor do texto do menu */
+    padding-bottom: 4px;            /* espaço entre o texto e o traço */
+}
+
+header a::before {
+    content: "";                    /* obrigatório: sem isso o traço não existe */
+    position: absolute;             /* posiciona o traço dentro do link */
+    bottom: 0;                      /* cola o traço no fundo do link */
+    left: 0;                        /* começa na esquerda do link */
+    width: 0;                    /* ocupa toda a largura do link */
+    height: 3px;                    /* CORRIGIDO: espessura do traço (não pode ser negativa) */
+    border-radius: 2px;              /* CORRIGIDO: arredonda as bordas do traço */
+    background-color: var(--color-secondary);       /* cor do traço */
+    transition: width 0.5s; /* CORRIGIDO: adiciona uma transição suave para a largura do traço */
+}
+
+header a:hover::before,
+header a.active::before {
+    width: 50%; /* CORRIGIDO: faz o traço desaparecer ao passar o mouse */
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+    background-image: url('../images/8526814a51528ea56d9336e06abe8597.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px 0;
+    font-family: var(--font-family);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer #footer_subtitle {
+    font-size: 1.25rem;
+}
+
+footer #footer_subtitle, #footer_address {
+    margin-bottom: 10px;
+    text-align: center;
+}
