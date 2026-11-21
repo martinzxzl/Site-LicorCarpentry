@@ -1,0 +1,2 @@
+# Site-LicorCarpentry
+ landing page built with HTML, CSS, JS and Jquery
