@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lisco Carpentry</title>
+    <title>Gallery | Lisco Carpentry</title>
 
     <link rel="icon" type="image/png" href="../images/Emblema_circular_de_carpintaria_LISCO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="../css/gallery.css">
 </head>
 <body>
     <header>
@@ -34,7 +36,20 @@
     </header>
 
     <main>
-        <!-- o conteúdo da página vai aqui: hero, serviços, depoimentos... -->
+        <section class="gallery-section">
+            <h2>Gallery</h2>
+            <p class="gallery-intro">A selection of our work. Click a photo to see it larger.</p>
+
+            <!-- Imagens de ilustração: troque pelas fotos reais do trabalho -->
+            <div class="gallery">
+                <a href="../images/design-de-fachadas-de-casas-modernas-01-fachada-moderna-volumes-e-entrada-1.webp" title="Modern two-storey house with timber details"><img src="../images/design-de-fachadas-de-casas-modernas-01-fachada-moderna-volumes-e-entrada-1.webp" alt="Modern two-storey house with timber details" loading="lazy"></a>
+                <a href="../images/8526814a51528ea56d9336e06abe8597.jpg" title="Single-storey house with covered carport"><img src="../images/8526814a51528ea56d9336e06abe8597.jpg" alt="Single-storey house with covered carport" loading="lazy"></a>
+                <a href="../images/gallery/house-1.svg" title="Gable roof house with timber deck"><img src="../images/gallery/house-1.svg" alt="Gable roof house with timber deck" loading="lazy"></a>
+                <a href="../images/gallery/house-2.svg" title="Modern house with wood cladding"><img src="../images/gallery/house-2.svg" alt="Modern house with wood cladding" loading="lazy"></a>
+                <a href="../images/gallery/house-3.svg" title="Cottage with covered porch"><img src="../images/gallery/house-3.svg" alt="Cottage with covered porch" loading="lazy"></a>
+                <a href="../images/gallery/house-6.svg" title="Cottage with warm render"><img src="../images/gallery/house-6.svg" alt="Cottage with warm render" loading="lazy"></a>
+            </div>
+        </section>
     </main>
 
     <footer id="footer">
@@ -43,6 +58,9 @@
         <p id="footer_copy">&copy; 2026 Lisco Carpentry. All rights reserved.</p>
     </footer>
 
+    <script src="../js/vendor/jquery.min.js"></script>
+    <script src="../js/vendor/magnific-popup.min.js"></script>
     <script src="../js/mobile-navbar.js"></script>
+    <script src="../js/gallery.js"></script>
 </body>
 </html>
